@@ -83,7 +83,6 @@
             let feed = analyzer.feeder(string + ' ');
             let currentState = states.initialState;
             for (let symbol of feed) {
-              console.log(currentState);
               currentState = analyzer.automatonFeed(states.statesObjArr, currentState, symbol);
             }
             if (states.finalStates.indexOf(currentState) > -1) {
