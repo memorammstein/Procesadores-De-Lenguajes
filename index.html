@@ -75,21 +75,6 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/analisisLexico_numerosReales.js" charset="utf-8"></script>
         <script src="js/states.js" charset="utf-8"></script>
-        <script type="text/javascript">
-          var evaluateString = function evaluate(string) {
-            'use strict';
-            let states = estados();
-            let analyzer = analizador();
-            let feed = analyzer.feeder(string + ' ');
-            let currentState = states.initialState;
-            for (let symbol of feed) {
-              currentState = analyzer.automatonFeed(states.statesObjArr, currentState, symbol);
-            }
-            if (states.finalStates.indexOf(currentState) > -1) {
-              window.alert("Tu cadena es válida");
-            }
-          };
-        </script>
         <script src="js/main.js"></script>
     </body>
 </html>
