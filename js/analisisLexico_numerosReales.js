@@ -20,7 +20,6 @@ function analizador() {
 			let defaultArc = undefined;
 			for (let arc of validStateObj.arcs) {
 				if (arc.canGoBy(symbol)) {
-					console.log("can go by " + symbol + " to " + arc.to);
 					return arc.to;
 				}
 				if (arc.canGoBy('other')) {
